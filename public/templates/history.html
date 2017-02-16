@@ -1,0 +1,21 @@
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Movie</th>
+      <th>Movie Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="history in historyList | unique:'name'">
+      <td>
+        <div class="historyImg" style="background-image: url({{history.img}});"></div>
+      </td>
+      <td>{{history.name}}</td>
+      <td>{{history.des}}</td>
+    </tr>
+    <tr data-ng-show="historyList.length <= 0">
+      <td colspan="3" style="text-align:center;">You dont have any history.</td>
+    </tr>
+  </tbody>
+</table>

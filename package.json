@@ -1,0 +1,28 @@
+{
+  "name": "MovieApp",
+  "version": "1.0.0",
+  "description": "Online Video Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ram-dev/MovieApp"
+  },
+  "keywords": [
+    "movie",
+    "video",
+    "angular",
+    "nodejs"
+  ],
+  "author": "Ramkumar A H",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.10.4"
+  },
+  "dependencies": {
+    "express":"*",
+    "body-parser":"*"
+  }
+}

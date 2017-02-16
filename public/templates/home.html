@@ -1,0 +1,9 @@
+<div class="row movies-list">
+  <div class="col-md-3" data-ng-repeat="movie in movies | orderBy:'title' | filter:search">
+    <a ng-href="#/movie/{{movie.id}}" ng-click="storeMovie(movie)" class="">
+      <img data-ng-src="{{movie.images[0].url}}"  class="thumb-big">
+    </a>
+    <h5 style="display: inline-flex;"><a ng-href="#/movie/{{movie.id}}" class="truncate">{{movie.title | uppercase}}</a></h2>
+  </div>
+</div>
+ 

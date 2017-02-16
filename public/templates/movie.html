@@ -1,0 +1,45 @@
+<a ng-click="back()" class="btn btn-info" href="javascript:">« Back</a>
+
+<div ng-show="currMovie">
+  <h3>{{currMovie.title}}</h3>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-8">
+      <div style="border:1px solid #dfdfdf; ">
+      <video width="100%" higth="{{currMovie.images[0].height}}" controls preload="none">
+        <source  src="{{currMoviw.contents.url}}" type="video/mp4">
+        <source src="{{currMoviw.contents.url}}" type="video/ogg"> 
+          <object width="640" height="384" type="application/x-shockwave-flash" data="__FLASH__.SWF">
+              <!-- Firefox uses the `data` attribute above, IE/Safari uses the param below -->
+              <param name="movie" value="__FLASH__.SWF" />
+              <param name="flashvars" value="image={{currMoviw.images[0].url}}&amp;file={{currMovie.images[0].height}}" />
+              <!-- fallback image. note the title field below, put the title of the video there -->
+              <img src="{{currMoviw.images[0].url}}" width="640" height="360" alt="{{currMovie.title}}"
+                   title="No video playback capabilities, please download the video below" />
+          </object>
+      </video>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <h3>{{currMovie.title}}</h3>
+       
+        <p>Publish: {{currMovie.publishedDate | date:'MM/dd/yyyy'}} | Available: {{currMovie.availableDate | date:'MM/dd/yyyy'}}</p>
+        <h4>Cast</h4>
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-info" data-ng-repeat="cast in currMovie.credits">           
+            {{cast.name}} | {{cast.role}}
+          </li>
+        </ul>
+      
+        <h4>Categoies</h4>
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-success">            
+            <span data-ng-repeat="cast in currMovie.categories">{{cast.title}} |  </span>
+          </li>
+        </ul>
+        
+        <div>
+          <h4>Synopsis</h4>        
+          <p>{{currMovie.description}}</p> 
+        </div>
+</div>
+

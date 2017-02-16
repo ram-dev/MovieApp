@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!-- starts angular app -->
+<html data-ng-app="MovieApp">
+<head>
+  <title>Movie app - Watch Movie video Online</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+<body class="container" data-ng-controller="MovieAppController">
+  <div data-ng-include src="headerSrc"></div>
+  <!-- placeholder for template views -->
+  <div data-ng-view=""></div>
+  <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+  <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/lib/angular.min.js"></script>
+  <script type="text/javascript" src="js/lib/angular-route.min.js"></script>
+  <script type="text/javascript" src="js/lib/angular-resource.min.js"></script>
+  <script type="text/javascript" src="js/controller/app.js"></script>
+  <script type="text/javascript" src="js/router/router.js"></script>
+  <script type="text/javascript" src="js/service/service.js"></script>
+</body>
+</html>
