@@ -22,7 +22,8 @@
     "express": "^4.10.4"
   },
   "dependencies": {
-    "express":"*",
-    "body-parser":"*"
+    "body-parser": "*",
+    "express": "*",
+    "morgan": "^1.9.0"
   }
 }
